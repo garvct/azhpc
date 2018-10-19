@@ -2,6 +2,10 @@
 	"$schema": "http://schema.management.azure.com/schemas/2015-01-01-preview/deploymentTemplate.json",
 	"contentVersion": "1.0.0.0",
 	"parameters": {
+    "dnszones_cgnfs.local_name": {
+            "defaultValue": "cgnfs.local",
+            "type": "String"
+        },
 		"vmSku": {
 			"defaultValue": "Standard_H16r",
 			"allowedValues": [
@@ -161,6 +165,28 @@
 				]
 			}
 		},
+{
+            "comments": "Generalized from resource: '/subscriptions/f5a67d06-2d09-4090-91cc-e3298907a021/resourceGroups/cg-azhpc-avere-27dc9a/providers/Microsoft.Network/dnszones/cgnfs.local'.",
+            "type": "Microsoft.Network/dnszones",
+            "name": "[parameters('dnszones_cgnfs.local_name')]",
+            "apiVersion": "2018-05-01",
+            "location": "global",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "registrationVirtualNetworks": [
+                    {
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks', [variables('virtualNetworkName')]"
+                    }
+                ],
+                "resolutionVirtualNetworks": [],
+                "zoneType": "Private"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az27dc9avnet_name'))]"
+            ]
+        },
+
 		{
 			"type": "Microsoft.Network/publicIPAddresses",
 			"name": "[variables('publicIPAddressName')]",
