@@ -176,14 +176,14 @@
             "properties": {
                 "registrationVirtualNetworks": [
                     {
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks', [variables('virtualNetworkName')]"
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName')"
                     }
                 ],
                 "resolutionVirtualNetworks": [],
                 "zoneType": "Private"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az27dc9avnet_name'))]"
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName')))]"
             ]
         },
 
