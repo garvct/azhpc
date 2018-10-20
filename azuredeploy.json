@@ -221,7 +221,8 @@
 			},
 			"dependsOn": [
 				"[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
-				"[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+				"[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]",
+			        "[concat('Microsoft.Network/dnszones/', parameters('dnszones_cgnfs.local_name'))"
 			]
 		},
 		{
@@ -285,7 +286,8 @@
 						}
 					},
 					"dependsOn": [
-						"[concat('Microsoft.Compute/virtualMachines/', variables('jumpBoxName'))]"
+						"[concat('Microsoft.Compute/virtualMachines/', variables('jumpBoxName'))]",
+			                        "[concat('Microsoft.Network/dnszones/', parameters('dnszones_cgnfs.local_name'))"
 					]
 				}
 			],
@@ -370,6 +372,7 @@
 			},
 			"dependsOn": [
 				"[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]",
+			        "[concat('Microsoft.Network/dnszones/', parameters('dnszones_cgnfs.local_name'))",
 				"[concat('Microsoft.Compute/virtualMachines/', variables('jumpBoxName'))]",
 				"[concat('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
 			]
