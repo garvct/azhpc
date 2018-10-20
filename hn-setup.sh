@@ -26,8 +26,8 @@ yum install -y -q nfs-utils nmap htop pdsh screen git axel
 yum update -y nss curl libcurl
 
 cat << EOF >> /etc/exports
-/home $localip.*(rw,sync,no_root_squash,no_all_squash)
-/mnt/resource/scratch $localip.*(rw,sync,no_root_squash,no_all_squash)
+/home *(rw,sync,no_root_squash,no_all_squash)
+/mnt/resource/scratch *(rw,sync,no_root_squash,no_all_squash)
 EOF
 
 systemctl enable rpcbind
