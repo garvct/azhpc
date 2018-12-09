@@ -14,8 +14,7 @@
 				"Standard_H16r",
 				"Standard_H16mr",
 				"Standard_NC24r",
-				"Standard_Hb",
-				"Standard_Hc"
+				"Standard_HB60rs"
 			],
 			"type": "String",
 			"metadata": {
@@ -241,7 +240,7 @@
 			"location": "[variables('resourceLocation')]",
 			"properties": {
 				"hardwareProfile": {
-					"vmSize": "Standard_H16"
+					"vmSize": "Standard_E16s_v3"
 				},
 				"osProfile": {
 					"computerName": "[variables('jumpBoxName')]",
