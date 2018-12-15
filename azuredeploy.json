@@ -122,7 +122,7 @@
 		"JBoxType": {
 			"publisher": "OpenLogic",
 			"offer": "CentOS",
-			"sku": "7.1",
+			"sku": "7.5",
 			"version": "latest"
 		},
 		"JBimageReference": "[variables('JBoxType')]",
