@@ -14,7 +14,8 @@
 				"Standard_H16r",
 				"Standard_H16mr",
 				"Standard_NC24r",
-				"Standard_HB60rs"
+				"Standard_HB60rs",
+				"Standard_HC44rs"
 			],
 			"type": "String",
 			"metadata": {
@@ -64,8 +65,8 @@
 		"storageName": "[concat(variables('namingInfix'),'sa')]",
 		"jumpBoxIPConfigName": "[concat(variables('jumpBoxName'), 'ipconfig')]",
 		"jumpBoxNicName": "[concat(variables('jumpBoxName'), 'nic')]",
-		"addressPrefix": "10.3.0.0/16",
-		"subnetPrefix": "10.3.2.0/24",
+		"addressPrefix": "10.14.0.0/16",
+		"subnetPrefix": "10.14.2.0/24",
 		"virtualNetworkName": "[concat(variables('namingInfix'), 'vnet')]",
 		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
