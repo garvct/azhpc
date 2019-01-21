@@ -38,7 +38,8 @@
 				"CentOS-HPC_7.1",
 				"CentOS-HPC_7.3",
 				"CentOS-HPC_7.4",
-				"CentOS_7.5"
+				"CentOS_7.5",
+				"CentOS_7.6"
 			],
 			"metadata": {
 				"description": "The VM image of the compute nodes"
@@ -112,6 +113,12 @@
 				"sku": "7.5",
 				"version": "latest"
 			},
+			"CentOS_7.6": {
+				"publisher": "OpenLogic",
+				"offer": "CentOS",
+				"sku": "7.6",
+				"version": "latest"
+			},
 			"Ubuntu_1604": {
 				"publisher": "Canonical",
 				"offer": "UbuntuServer",
@@ -123,7 +130,7 @@
 		"JBoxType": {
 			"publisher": "OpenLogic",
 			"offer": "CentOS",
-			"sku": "7.5",
+			"sku": "7.6",
 			"version": "latest"
 		},
 		"JBimageReference": "[variables('JBoxType')]",
