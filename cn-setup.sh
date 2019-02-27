@@ -3,7 +3,7 @@
 # fail on any error
 set -e
 
-HEADNODE=10.15.2.4
+HEADNODE=10.14.2.4
 
 sed -i 's/^ResourceDisk.MountPoint=\/mnt\/resource$/ResourceDisk.MountPoint=\/mnt\/local_resource/g' /etc/waagent.conf
 umount /mnt/resource
